@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+
+	
+	<title></title>
+</head>
+<body onLoad="show('Snacks')">
+
+
+
+
+
+
+
+
+
+
+<div class="modal" id="modal1">
+  <div class="modal-dialog">
+  	<form id = "user_form" onsubmit="registerUser()">
+    <header class="modal-header">
+      <h2>Enter Data</h2>
+
+
+    </header>
+
+    <section class="modal-content">
+    
+      <p><strong>Mobile Number:</strong></p>
+      <br>
+      <input type="text" class="modal-input" id="input-mobile" maxlength="8" name="" pattern="\d{8}" title="Enter Your Mobile Number - 8 Digit" required />
+      <br>
+      <br>
+      <p><strong>Address</strong></p>
+      <br>
+      <input type="text" class="modal-input" id="input-address"  name="" title="Enter Your Address" required />
+      
+    </section>
+    <br>
+    <footer class="modal-footer">
+    	<button id="submit-mod" class="close-modal" aria-label="close modal" data-close>
+        Submit 
+      </button>
+     
+    </footer>
+    </form>
+  </div>
+</div> 
+
+
+
+
+
+	<div class="hero">
+		
+
+	</div>
+	<div class="product">
+
+
+		<div class="menu">
+			
+			<a href="#" class="btn" onClick="show(this)">Snacks</a>
+			<a href="#" class="btn" onClick="show(this)">Drinks</a>
+			<a href="#" class="btn" onClick="show(this)">Essentials</a>
+
+		</div>
+		
+		<!--<div id="cart" data-keyboard="false" data-backdrop="static">
+				
+			</div>
+
+
+
+
+			<div id="overlay">
+
+		</div>-->
+
+
+
+		<div id="shop-cart">
+			
+			<button class="" href="" onClick="window.location.href = '/cart.html';">CART</button> <!--showCart()>CART</button>-->
+			<span class='badge' id='lblCartCount'>0</span>
+				<!--<i class="fa" style="font-size:24px">&#xf07a;</i>-->
+			
+		</div>
+
+
+
+		<div id="items">
+
+
+		</div>
+		
+
+
+	</div>
+
+
+
+
+
+</body>
+</html>

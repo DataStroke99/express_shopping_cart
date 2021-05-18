@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/styles_cart.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+
+	
+	<title></title>
+</head>
+
+
+<body onLoad="cartData()">
+	
+<input type="submit" value="Go Back" class="basic_btn" onClick="window.location.href = '/';">
+
+
+
+
+	<div class="shopping-cart" id="shopping-cart">
+
+
+  <!-- Title -->
+  <div class="shopping-title" id="shopping-title">
+   <h2 style="margin-left: 20px;"> Shopping Cart</h2>
+  </div>
+
+<div class="item">
+
+	<div id="promotion"></div>
+</div>
+
+<div class="item" >
+	<div class="image"></div>
+	<div class="description"></div>
+	<div class="quantity"></div>
+
+	<div id="cost">Total Cost: <span id="total_price"></span></div><br>
+
+</div>
+
+
+	<input type="submit" value="Checkout" class="basic_btn" onClick="checkout()">
+
+</div>
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+

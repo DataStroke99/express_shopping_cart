@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	
+
+	<head>
+		<link rel="stylesheet" href="css/style_clock.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	
+	<title></title>
+
+
+
+
+
+	</head>
+	<script type="text/javascript">
+		
+			function getTimeRemaining(endtime) {
+			  const total = Date.parse(endtime) - Date.parse(new Date());
+			  const seconds = Math.floor((total / 1000) % 60);
+			  const minutes = Math.floor((total / 1000 / 60) % 60);
+
+			  
+			  return {
+			    total,
+			    minutes,
+			    seconds
+			  };
+			}
+
+			function initializeClock(id, endtime) {
+			  const clock = document.getElementById(id);
+
+			  const minutesSpan = clock.querySelector('.minutes');
+			  const secondsSpan = clock.querySelector('.seconds');
+
+			  function updateClock() {
+			    const t = getTimeRemaining(endtime);
+
+			    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+			    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+			    console.log(t)
+			    if (t.minutes == 0 && t.seconds ==0 || t.total <= 0) {//if (t.total <= 0) {
+			      clearInterval(timeinterval);
+			    }
+
+			  }
+
+			  updateClock();
+			  const timeinterval = setInterval(updateClock, 1000);
+			}
+
+
+
+	
+				$( document ).ready(function() {
+			
+					const deadline = new Date(Date.parse(new Date()) + 10* 60 * 1000);
+					initializeClock('clockdiv', deadline);
+
+
+				});
+					
+
+
+
+			
+
+			
+
+
+
+
+
+	</script>
+
+
+
+
+	<body onload="localStorage.clear();">
+	
+
+	<h1>Your deilver would be there in:</h1>
+		<div id="clockdiv" onLoad="">
+		  <div>
+		    <span class="minutes"></span>
+		    <div class="smalltext">Minutes</div>
+		  </div>
+		  <div>
+		    <span class="seconds"></span>
+		    <div class="smalltext">Seconds</div>
+		  </div>
+		</div>
+	<h3>Or you earn a free Apology</h3>
+
+
+
+
+
+
+
+
+
+<form onsubmit="return false" >
+<br>
+<br>
+<br>
+<br>
+  <div >
+    <h2>Give Feedback: </h2>
+    <div id = "text_area">
+	<textarea placeholder="Enter Feedback" rows="20" name="comment[text]"  cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" id="feed_text"></textarea>
+	</div>
+
+  </div>
+  
+
+
+
+  
+  <input type="submit" id="submit" value="Submit" class="basic_btn" onClick="submit_feedback()"/>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
